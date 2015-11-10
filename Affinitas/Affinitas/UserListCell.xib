@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,25 +15,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-ys-SMg">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-ys-SMg">
                         <rect key="frame" x="6" y="5" width="60" height="60"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="HC0-G8-guA"/>
+                            <constraint firstAttribute="width" constant="60" id="g04-TT-kQc"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age : 43" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0G-mt-kX3">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Age : 43" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0G-mt-kX3">
                         <rect key="frame" x="74" y="35" width="65" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Berlin" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cle-nf-1Fs">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Berlin" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cle-nf-1Fs">
                         <rect key="frame" x="197" y="35" width="96" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Angelina Mankel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt2-lN-RHi">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angelina Mankel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt2-lN-RHi">
                         <rect key="frame" x="74" y="8" width="219" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
@@ -41,6 +46,19 @@
                     </label>
                 </subviews>
                 <animations/>
+                <constraints>
+                    <constraint firstItem="Qnl-ys-SMg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-2" id="0RY-oc-ral"/>
+                    <constraint firstItem="cle-nf-1Fs" firstAttribute="leading" secondItem="q0G-mt-kX3" secondAttribute="trailing" constant="58" id="0av-mX-2KY"/>
+                    <constraint firstItem="Nt2-lN-RHi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="3Nq-63-WO0"/>
+                    <constraint firstItem="cle-nf-1Fs" firstAttribute="top" secondItem="Nt2-lN-RHi" secondAttribute="bottom" constant="6" id="6Hv-Gx-mFH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cle-nf-1Fs" secondAttribute="trailing" constant="19" id="C7I-ba-C9d"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Nt2-lN-RHi" secondAttribute="trailing" constant="19" id="E4t-vk-gQJ"/>
+                    <constraint firstItem="Qnl-ys-SMg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="IIO-cL-NRc"/>
+                    <constraint firstItem="Nt2-lN-RHi" firstAttribute="leading" secondItem="Qnl-ys-SMg" secondAttribute="trailing" constant="8" id="acq-9Y-Bii"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Qnl-ys-SMg" secondAttribute="bottom" constant="-4" id="iUY-vi-0xK"/>
+                    <constraint firstItem="q0G-mt-kX3" firstAttribute="top" secondItem="Nt2-lN-RHi" secondAttribute="bottom" constant="6" id="vE2-Pw-HxT"/>
+                    <constraint firstItem="q0G-mt-kX3" firstAttribute="leading" secondItem="Qnl-ys-SMg" secondAttribute="trailing" constant="8" id="wnl-Gq-Izg"/>
+                </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
@@ -49,7 +67,7 @@
                 <outlet property="kUserImage" destination="Qnl-ys-SMg" id="Yfk-ga-BEw"/>
                 <outlet property="kUserName" destination="Nt2-lN-RHi" id="b0J-wS-AJn"/>
             </connections>
-            <point key="canvasLocation" x="249" y="295"/>
+            <point key="canvasLocation" x="341" y="305"/>
         </tableViewCell>
     </objects>
 </document>
