@@ -14,9 +14,11 @@
 
 #define MOBILE_BASE_URL_DE                          [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:BACKEND_PLIST ofType:@"plist"]][@"MobileBaseUrl"]
 
-// API route pathes
-#define CLIENT_API_GET_PRODUCT_LIST                 @"/list"
-#define CLIENT_API_GET_PRODUCT_DETAIL               @"/detail"
+// API paramters
+#define PARAMATER_PRODUCT_LIST                 @"list"
+#define PARAMATER_PRODUCT_DETAIL               @"detail"
+#define PARAMATER_ACTION                       @"action"
+
 
 //API Header params
 #define API_HEADER_JSON                             @"application/json"

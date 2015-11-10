@@ -13,6 +13,7 @@
 
 + (AFMobileApiManager *)sharedClient;
 
-- (void)getProductListWithCompletion:(void (^)(id response))completionBlock error:(void (^)(NSError *error))errorBlock;
+- (void)getUserListWithCompletion:(void (^)(id response))completionBlock error:(void (^)(NSError *error))errorBlock;
+- (void)getUserDetailWithCompletion:(NSString*)userId errBlock:(void (^)(id response))completionBlock error:(void (^)(NSError *error))errorBlock;
 
 @end

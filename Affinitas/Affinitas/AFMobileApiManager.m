@@ -35,6 +35,27 @@
     return MOBILE_BASE_URL_DE;
 }
 
+//Init parameter to fetch all user list
+//action = list
+
+- (NSMutableDictionary*)listParam{
+    NSMutableDictionary *paramsDict = [NSMutableDictionary dictionary];
+    paramsDict[PARAMATER_ACTION] = PARAMATER_PRODUCT_LIST;
+    return paramsDict;
+}
+
+//Init parameter to fetch selected user's detail
+//@Param : action = list
+//@Param : id = selcted_user_id
+
+- (NSMutableDictionary*)detailParam:(NSString*)userId{
+    NSMutableDictionary *paramsDict = [NSMutableDictionary dictionary];
+    paramsDict[PARAMATER_ACTION] = PARAMATER_PRODUCT_DETAIL;
+    paramsDict[PARAMATER_ACTION] = userId;
+    return paramsDict;
+}
+
+
 #pragma mark -  API REQUEST CALL
 
 - (void)sendRequestForPath:(NSString *)path requestType:(NSString *)type parameters:(NSDictionary *)parameters completion:(void (^)(NSDictionary *response))completionBlock error:(void (^)(NSError *error))errorBlock {
@@ -71,9 +92,14 @@
 }
 
 #pragma mark - API calls
+//FETCH User List
+- (void)getUserListWithCompletion:(void (^)(id response))completionBlock error:(void (^)(NSError *error))errorBlock {
+    [self sendRequestForPath:nil requestType:@"GET" parameters:self.listParam completion:completionBlock error:errorBlock];
+}
 
-- (void)getProductListWithCompletion:(void (^)(id response))completionBlock error:(void (^)(NSError *error))errorBlock {
-    [self sendRequestForPath:nil requestType:@"GET" parameters:nil completion:completionBlock error:errorBlock];
+//FETCH User Details
+- (void)getUserDetailWithCompletion:(NSString*)userId errBlock:(void (^)(id response))completionBlock error:(void (^)(NSError *error))errorBlock {
+    [self sendRequestForPath:nil requestType:@"GET" parameters:[self detailParam:userId] completion:completionBlock error:errorBlock];
 }
 
 @end
