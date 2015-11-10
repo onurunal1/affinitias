@@ -40,7 +40,7 @@
 
 - (NSMutableDictionary*)listParam{
     NSMutableDictionary *paramsDict = [NSMutableDictionary dictionary];
-    paramsDict[PARAMATER_ACTION] = PARAMATER_PRODUCT_LIST;
+    paramsDict[PARAMATER_ACTION] = PARAMATER_USER_LIST;
     return paramsDict;
 }
 
@@ -50,8 +50,8 @@
 
 - (NSMutableDictionary*)detailParam:(NSString*)userId{
     NSMutableDictionary *paramsDict = [NSMutableDictionary dictionary];
-    paramsDict[PARAMATER_ACTION] = PARAMATER_PRODUCT_DETAIL;
-    paramsDict[PARAMATER_ACTION] = userId;
+    paramsDict[PARAMATER_ACTION] = PARAMATER_USER_DETAIL;
+    paramsDict[PARAMATER_USER_ID] = userId;
     return paramsDict;
 }
 

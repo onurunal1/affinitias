@@ -24,6 +24,13 @@
     } error:^(NSError *error) {
         NSLog(@"Err : %@",error.description);
     }];
+    
+    [[AFMobileApiManager sharedClient] getUserDetailWithCompletion:@"953aae5e-cd98-4f44-80cf-d8512ed082ca" errBlock:^(id response) {
+        NSArray *arrDetail = response[API_JSON_RESPONSE_DATA];
+        NSLog(@"User Detail %@",arrDetail);
+    } error:^(NSError *error) {
+        NSLog(@"Err : %@",error.description);
+    }];
     return YES;
 }
 
