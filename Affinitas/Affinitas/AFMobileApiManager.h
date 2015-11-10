@@ -11,4 +11,8 @@
 
 @interface AFMobileApiManager : AFHTTPRequestOperationManager
 
++ (AFMobileApiManager *)sharedClient;
+
+- (void)getProductListWithCompletion:(void (^)(id response))completionBlock error:(void (^)(NSError *error))errorBlock;
+
 @end

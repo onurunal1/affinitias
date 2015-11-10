@@ -18,5 +18,8 @@
 #define CLIENT_API_GET_PRODUCT_LIST                 @"/list"
 #define CLIENT_API_GET_PRODUCT_DETAIL               @"/detail"
 
+//API Header params
+#define API_HEADER_JSON                             @"application/json"
+#define API_HEADER_ACCEPT                           @"Accept"
 
 #endif /* AFConstant_h */
