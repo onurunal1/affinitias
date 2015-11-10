@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		371C1FC41BF2793800782949 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 371C1FC31BF2793800782949 /* main.m */; };
 		371C1FC71BF2793800782949 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 371C1FC61BF2793800782949 /* AppDelegate.m */; };
-		371C1FCA1BF2793800782949 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371C1FC91BF2793800782949 /* ViewController.m */; };
 		371C1FCD1BF2793800782949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371C1FCB1BF2793800782949 /* Main.storyboard */; };
 		371C1FD01BF2793800782949 /* Affinitas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 371C1FCE1BF2793800782949 /* Affinitas.xcdatamodeld */; };
 		371C1FD21BF2793800782949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371C1FD11BF2793800782949 /* Assets.xcassets */; };
@@ -17,6 +16,8 @@
 		37CE71321BF2872700C72F96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37CE71341BF2872700C72F96 /* Localizable.strings */; };
 		37CE713A1BF28AC800C72F96 /* Staging_Backend.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37CE71391BF28AC800C72F96 /* Staging_Backend.plist */; };
 		37CE713E1BF28CA500C72F96 /* AFMobileApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE713D1BF28CA500C72F96 /* AFMobileApiManager.m */; };
+		37CE71411BF2B5E600C72F96 /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE71401BF2B5E600C72F96 /* UserTableViewController.m */; };
+		37CE71441BF2B6C600C72F96 /* UserDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE71431BF2B6C600C72F96 /* UserDetailTableViewController.m */; };
 		FABD0BED87510F24CF6A3F34 /* libPods-Affinitas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC0CFB1289C10704A9AEC01 /* libPods-Affinitas.a */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +27,6 @@
 		371C1FC31BF2793800782949 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		371C1FC51BF2793800782949 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		371C1FC61BF2793800782949 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		371C1FC81BF2793800782949 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		371C1FC91BF2793800782949 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		371C1FCC1BF2793800782949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		371C1FCF1BF2793800782949 /* Affinitas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Affinitas.xcdatamodel; sourceTree = "<group>"; };
 		371C1FD11BF2793800782949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +40,10 @@
 		37CE71391BF28AC800C72F96 /* Staging_Backend.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Staging_Backend.plist; sourceTree = "<group>"; };
 		37CE713C1BF28CA500C72F96 /* AFMobileApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMobileApiManager.h; sourceTree = "<group>"; };
 		37CE713D1BF28CA500C72F96 /* AFMobileApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMobileApiManager.m; sourceTree = "<group>"; };
+		37CE713F1BF2B5E600C72F96 /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
+		37CE71401BF2B5E600C72F96 /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
+		37CE71421BF2B6C600C72F96 /* UserDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailTableViewController.h; sourceTree = "<group>"; };
+		37CE71431BF2B6C600C72F96 /* UserDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailTableViewController.m; sourceTree = "<group>"; };
 		D3722019BAE834EB9477EE18 /* Pods-Affinitas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affinitas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas.debug.xcconfig"; sourceTree = "<group>"; };
 		F2EC362BBB5F6193D1C7D9F0 /* Pods-Affinitas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affinitas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,8 +123,10 @@
 		37CE712A1BF283C700C72F96 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				371C1FC81BF2793800782949 /* ViewController.h */,
-				371C1FC91BF2793800782949 /* ViewController.m */,
+				37CE713F1BF2B5E600C72F96 /* UserTableViewController.h */,
+				37CE71401BF2B5E600C72F96 /* UserTableViewController.m */,
+				37CE71421BF2B6C600C72F96 /* UserDetailTableViewController.h */,
+				37CE71431BF2B6C600C72F96 /* UserDetailTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -295,8 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				371C1FCA1BF2793800782949 /* ViewController.m in Sources */,
 				371C1FC71BF2793800782949 /* AppDelegate.m in Sources */,
+				37CE71441BF2B6C600C72F96 /* UserDetailTableViewController.m in Sources */,
+				37CE71411BF2B5E600C72F96 /* UserTableViewController.m in Sources */,
 				37CE713E1BF28CA500C72F96 /* AFMobileApiManager.m in Sources */,
 				371C1FC41BF2793800782949 /* main.m in Sources */,
 				371C1FD01BF2793800782949 /* Affinitas.xcdatamodeld in Sources */,
