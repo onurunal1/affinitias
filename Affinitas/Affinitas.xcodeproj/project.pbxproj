@@ -14,9 +14,11 @@
 		371C1FD01BF2793800782949 /* Affinitas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 371C1FCE1BF2793800782949 /* Affinitas.xcdatamodeld */; };
 		371C1FD21BF2793800782949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371C1FD11BF2793800782949 /* Assets.xcassets */; };
 		371C1FD51BF2793800782949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371C1FD31BF2793800782949 /* LaunchScreen.storyboard */; };
+		FABD0BED87510F24CF6A3F34 /* libPods-Affinitas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC0CFB1289C10704A9AEC01 /* libPods-Affinitas.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FC0CFB1289C10704A9AEC01 /* libPods-Affinitas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Affinitas.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		371C1FBF1BF2793800782949 /* Affinitas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affinitas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		371C1FC31BF2793800782949 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		371C1FC51BF2793800782949 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		371C1FD11BF2793800782949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		371C1FD41BF2793800782949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		371C1FD61BF2793800782949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3722019BAE834EB9477EE18 /* Pods-Affinitas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affinitas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas.debug.xcconfig"; sourceTree = "<group>"; };
+		F2EC362BBB5F6193D1C7D9F0 /* Pods-Affinitas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affinitas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABD0BED87510F24CF6A3F34 /* libPods-Affinitas.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				371C1FC11BF2793800782949 /* Affinitas */,
 				371C1FC01BF2793800782949 /* Products */,
+				5DC87E808111EFEE33EE7ACA /* Pods */,
+				96F38B78E5550399BF15F3A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +89,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5DC87E808111EFEE33EE7ACA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3722019BAE834EB9477EE18 /* Pods-Affinitas.debug.xcconfig */,
+				F2EC362BBB5F6193D1C7D9F0 /* Pods-Affinitas.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		96F38B78E5550399BF15F3A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FC0CFB1289C10704A9AEC01 /* libPods-Affinitas.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 371C1FD91BF2793800782949 /* Build configuration list for PBXNativeTarget "Affinitas" */;
 			buildPhases = (
+				65048785A2C75F7E97FB5AC4 /* Check Pods Manifest.lock */,
 				371C1FBB1BF2793800782949 /* Sources */,
 				371C1FBC1BF2793800782949 /* Frameworks */,
 				371C1FBD1BF2793800782949 /* Resources */,
+				29BE856D0683159BE63F8BA5 /* Embed Pods Frameworks */,
+				7A3355C97DFC56AD2CCCDE4C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29BE856D0683159BE63F8BA5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65048785A2C75F7E97FB5AC4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A3355C97DFC56AD2CCCDE4C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		371C1FBB1BF2793800782949 /* Sources */ = {
@@ -263,6 +338,7 @@
 		};
 		371C1FDA1BF2793800782949 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3722019BAE834EB9477EE18 /* Pods-Affinitas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Affinitas/Info.plist;
@@ -274,6 +350,7 @@
 		};
 		371C1FDB1BF2793800782949 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2EC362BBB5F6193D1C7D9F0 /* Pods-Affinitas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Affinitas/Info.plist;
@@ -302,6 +379,7 @@
 				371C1FDB1BF2793800782949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
