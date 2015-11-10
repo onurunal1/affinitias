@@ -14,6 +14,9 @@
 		371C1FD01BF2793800782949 /* Affinitas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 371C1FCE1BF2793800782949 /* Affinitas.xcdatamodeld */; };
 		371C1FD21BF2793800782949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371C1FD11BF2793800782949 /* Assets.xcassets */; };
 		371C1FD51BF2793800782949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371C1FD31BF2793800782949 /* LaunchScreen.storyboard */; };
+		37CE71321BF2872700C72F96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37CE71341BF2872700C72F96 /* Localizable.strings */; };
+		37CE713A1BF28AC800C72F96 /* Staging_Backend.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37CE71391BF28AC800C72F96 /* Staging_Backend.plist */; };
+		37CE713E1BF28CA500C72F96 /* AFMobileApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE713D1BF28CA500C72F96 /* AFMobileApiManager.m */; };
 		FABD0BED87510F24CF6A3F34 /* libPods-Affinitas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC0CFB1289C10704A9AEC01 /* libPods-Affinitas.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,14 @@
 		371C1FD11BF2793800782949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		371C1FD41BF2793800782949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		371C1FD61BF2793800782949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37CE712D1BF2850A00C72F96 /* AFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDefines.h; sourceTree = "<group>"; };
+		37CE71331BF2872700C72F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37CE71361BF2879700C72F96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37CE71371BF2880F00C72F96 /* Affinitas.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Affinitas.pch; sourceTree = "<group>"; };
+		37CE71381BF289FF00C72F96 /* AFConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFConstant.h; sourceTree = "<group>"; };
+		37CE71391BF28AC800C72F96 /* Staging_Backend.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Staging_Backend.plist; sourceTree = "<group>"; };
+		37CE713C1BF28CA500C72F96 /* AFMobileApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMobileApiManager.h; sourceTree = "<group>"; };
+		37CE713D1BF28CA500C72F96 /* AFMobileApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMobileApiManager.m; sourceTree = "<group>"; };
 		D3722019BAE834EB9477EE18 /* Pods-Affinitas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affinitas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas.debug.xcconfig"; sourceTree = "<group>"; };
 		F2EC362BBB5F6193D1C7D9F0 /* Pods-Affinitas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affinitas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,10 +80,10 @@
 			children = (
 				371C1FC51BF2793800782949 /* AppDelegate.h */,
 				371C1FC61BF2793800782949 /* AppDelegate.m */,
-				371C1FD61BF2793800782949 /* Info.plist */,
-				37CE71281BF283B200C72F96 /* Model */,
-				37CE71291BF283C000C72F96 /* View */,
-				37CE712A1BF283C700C72F96 /* Controller */,
+				37CE712D1BF2850A00C72F96 /* AFDefines.h */,
+				37CE71381BF289FF00C72F96 /* AFConstant.h */,
+				37CE713B1BF28B5D00C72F96 /* Plists */,
+				37CE712C1BF284C000C72F96 /* Core */,
 				37CE712B1BF283EE00C72F96 /* Resources */,
 				371C1FC21BF2793800782949 /* Supporting Files */,
 			);
@@ -91,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				371C1FCE1BF2793800782949 /* Affinitas.xcdatamodeld */,
+				37CE713C1BF28CA500C72F96 /* AFMobileApiManager.h */,
+				37CE713D1BF28CA500C72F96 /* AFMobileApiManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -117,8 +130,29 @@
 			isa = PBXGroup;
 			children = (
 				371C1FD11BF2793800782949 /* Assets.xcassets */,
+				37CE71341BF2872700C72F96 /* Localizable.strings */,
+				37CE71371BF2880F00C72F96 /* Affinitas.pch */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		37CE712C1BF284C000C72F96 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				37CE71281BF283B200C72F96 /* Model */,
+				37CE71291BF283C000C72F96 /* View */,
+				37CE712A1BF283C700C72F96 /* Controller */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		37CE713B1BF28B5D00C72F96 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				371C1FD61BF2793800782949 /* Info.plist */,
+				37CE71391BF28AC800C72F96 /* Staging_Backend.plist */,
+			);
+			name = Plists;
 			sourceTree = "<group>";
 		};
 		5DC87E808111EFEE33EE7ACA /* Pods */ = {
@@ -199,6 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				371C1FD51BF2793800782949 /* LaunchScreen.storyboard in Resources */,
+				37CE71321BF2872700C72F96 /* Localizable.strings in Resources */,
+				37CE713A1BF28AC800C72F96 /* Staging_Backend.plist in Resources */,
 				371C1FD21BF2793800782949 /* Assets.xcassets in Resources */,
 				371C1FCD1BF2793800782949 /* Main.storyboard in Resources */,
 			);
@@ -261,6 +297,7 @@
 			files = (
 				371C1FCA1BF2793800782949 /* ViewController.m in Sources */,
 				371C1FC71BF2793800782949 /* AppDelegate.m in Sources */,
+				37CE713E1BF28CA500C72F96 /* AFMobileApiManager.m in Sources */,
 				371C1FC41BF2793800782949 /* main.m in Sources */,
 				371C1FD01BF2793800782949 /* Affinitas.xcdatamodeld in Sources */,
 			);
@@ -283,6 +320,15 @@
 				371C1FD41BF2793800782949 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		37CE71341BF2872700C72F96 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37CE71331BF2872700C72F96 /* Base */,
+				37CE71361BF2879700C72F96 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -373,6 +419,7 @@
 			baseConfigurationReference = D3722019BAE834EB9477EE18 /* Pods-Affinitas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = Affinitas/Affinitas.pch;
 				INFOPLIST_FILE = Affinitas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.development.Affinitas;
@@ -385,6 +432,7 @@
 			baseConfigurationReference = F2EC362BBB5F6193D1C7D9F0 /* Pods-Affinitas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = Affinitas/Affinitas.pch;
 				INFOPLIST_FILE = Affinitas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.development.Affinitas;
