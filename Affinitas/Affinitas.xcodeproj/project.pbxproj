@@ -18,6 +18,8 @@
 		37CE713E1BF28CA500C72F96 /* AFMobileApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE713D1BF28CA500C72F96 /* AFMobileApiManager.m */; };
 		37CE71411BF2B5E600C72F96 /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE71401BF2B5E600C72F96 /* UserTableViewController.m */; };
 		37CE71441BF2B6C600C72F96 /* UserDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE71431BF2B6C600C72F96 /* UserDetailTableViewController.m */; };
+		37CE71491BF2B7D300C72F96 /* UserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE71471BF2B7D300C72F96 /* UserListCell.m */; };
+		37CE714A1BF2B7D300C72F96 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CE71481BF2B7D300C72F96 /* UserListCell.xib */; };
 		FABD0BED87510F24CF6A3F34 /* libPods-Affinitas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC0CFB1289C10704A9AEC01 /* libPods-Affinitas.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,9 @@
 		37CE71401BF2B5E600C72F96 /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
 		37CE71421BF2B6C600C72F96 /* UserDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailTableViewController.h; sourceTree = "<group>"; };
 		37CE71431BF2B6C600C72F96 /* UserDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailTableViewController.m; sourceTree = "<group>"; };
+		37CE71461BF2B7D300C72F96 /* UserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListCell.h; sourceTree = "<group>"; };
+		37CE71471BF2B7D300C72F96 /* UserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListCell.m; sourceTree = "<group>"; };
+		37CE71481BF2B7D300C72F96 /* UserListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
 		D3722019BAE834EB9477EE18 /* Pods-Affinitas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affinitas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas.debug.xcconfig"; sourceTree = "<group>"; };
 		F2EC362BBB5F6193D1C7D9F0 /* Pods-Affinitas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affinitas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +128,7 @@
 		37CE712A1BF283C700C72F96 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				37CE71451BF2B7AA00C72F96 /* CustomCell */,
 				37CE713F1BF2B5E600C72F96 /* UserTableViewController.h */,
 				37CE71401BF2B5E600C72F96 /* UserTableViewController.m */,
 				37CE71421BF2B6C600C72F96 /* UserDetailTableViewController.h */,
@@ -158,6 +164,16 @@
 				37CE71391BF28AC800C72F96 /* Staging_Backend.plist */,
 			);
 			name = Plists;
+			sourceTree = "<group>";
+		};
+		37CE71451BF2B7AA00C72F96 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				37CE71461BF2B7D300C72F96 /* UserListCell.h */,
+				37CE71471BF2B7D300C72F96 /* UserListCell.m */,
+				37CE71481BF2B7D300C72F96 /* UserListCell.xib */,
+			);
+			name = CustomCell;
 			sourceTree = "<group>";
 		};
 		5DC87E808111EFEE33EE7ACA /* Pods */ = {
@@ -237,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CE714A1BF2B7D300C72F96 /* UserListCell.xib in Resources */,
 				371C1FD51BF2793800782949 /* LaunchScreen.storyboard in Resources */,
 				37CE71321BF2872700C72F96 /* Localizable.strings in Resources */,
 				37CE713A1BF28AC800C72F96 /* Staging_Backend.plist in Resources */,
@@ -301,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				371C1FC71BF2793800782949 /* AppDelegate.m in Sources */,
+				37CE71491BF2B7D300C72F96 /* UserListCell.m in Sources */,
 				37CE71441BF2B6C600C72F96 /* UserDetailTableViewController.m in Sources */,
 				37CE71411BF2B5E600C72F96 /* UserTableViewController.m in Sources */,
 				37CE713E1BF28CA500C72F96 /* AFMobileApiManager.m in Sources */,
