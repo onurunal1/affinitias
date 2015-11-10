@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AFMobileApiManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[AFMobileApiManager sharedClient] getUserListWithCompletion:^(id response) {
+        NSArray *arr = response[API_JSON_RESPONSE_DATA];
+        NSLog(@"User %@",arr[0]);
+    } error:^(NSError *error) {
+        NSLog(@"Err : %@",error.description);
+    }];
     return YES;
 }
 

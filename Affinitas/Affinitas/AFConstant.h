@@ -19,6 +19,9 @@
 #define PARAMATER_PRODUCT_DETAIL               @"detail"
 #define PARAMATER_ACTION                       @"action"
 
+// API Response
+#define API_JSON_RESPONSE_SUCCESS              @"success"
+#define API_JSON_RESPONSE_DATA                 @"data"
 
 //API Header params
 #define API_HEADER_JSON                             @"application/json"
