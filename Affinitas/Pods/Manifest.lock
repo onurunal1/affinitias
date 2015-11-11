@@ -24,6 +24,7 @@ PODS:
   - DKHelper (0.9.6)
   - ISO8601 (0.3.0)
   - JSONModel (1.1.2)
+  - KASlideShow (2.2)
   - MagicalRecord (2.3.0)
   - MBProgressHUD (0.9.1)
   - SDWebImage (3.7.3):
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - DKHelper (~> 0.9.5)
   - ISO8601 (~> 0.3)
   - JSONModel (~> 1.1)
+  - KASlideShow
   - MagicalRecord
   - MBProgressHUD (~> 0.9.1)
   - SDWebImage (~> 3.7)
@@ -46,6 +48,7 @@ SPEC CHECKSUMS:
   DKHelper: 55010f62ced3d9fcc33e196e767da4c357ef90cb
   ISO8601: 8d8a22d5edf0554a1cf75bac028c76c1dc0ffaef
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
+  KASlideShow: 380f5ecee5f14370c9435ecedccee5b35fb69c5f
   MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84

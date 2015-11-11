@@ -13,8 +13,9 @@
 
 #define K_USER_CELL                @"UserListCell"
 
-
-@interface UserTableViewController ()
+@interface UserTableViewController (){
+    UserDetailTableViewController *detailData;
+}
 @end
 
 @implementation UserTableViewController
@@ -25,11 +26,17 @@
 }
 
 -(void)fetchData{
-    [[AFMobileApiManager sharedClient] getUserListWithCompletion:^(id response) {
-        [self setData:response];
-    } error:^(NSError *error) {
-        NSLog(@"Err : %@",error.description);
-    }];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [[AFMobileApiManager sharedClient] getUserListWithCompletion:^(id response) {
+            [self setData:response];
+        } error:^(NSError *error) {
+            NSLog(@"Err : %@",error.description);
+        }];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
 }
 
 -(void)setData:(AFUserRoot*)instance{
@@ -64,17 +71,23 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString* uID =[self.userList.data[indexPath.row] valueForKey:@"id"];
-    [self performSegueWithIdentifier:@"detailSegue" sender:uID];
-
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [[AFMobileApiManager sharedClient] getUserDetailWithCompletion:uID errBlock:^(id response) {
+            [self segue:response];
+        } error:^(NSError *error) {
+            NSLog(@"Err : %@",error.description);
+        }];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
 }
 
-#pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    UserDetailTableViewController *detailData = segue.destinationViewController;
-    if ([[segue identifier] isEqualToString:@"detailSegue"])
-    {
-        detailData.userId = sender;
-    }
+-(void)segue:(AFUserDetailRoot*)instance{
+    detailData = [[UserDetailTableViewController alloc] init];
+    detailData.userDetailList = instance;
+    [self.navigationController pushViewController:detailData animated:YES];
 }
 
 

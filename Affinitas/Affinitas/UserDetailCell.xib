@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserDetailCell" rowHeight="505" id="KGk-i7-Jjw" customClass="UserDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="white" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NOg-f6-B8r">
+                        <rect key="frame" x="10" y="139" width="302" height="357"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.9621645942" green="0.9621645942" blue="0.9621645942" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="1" id="9PZ-dz-9To">
+                            <size key="itemSize" width="95" height="95"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="qoK-9k-ZbP"/>
+                            <outlet property="delegate" destination="-1" id="Qd6-CI-8LA"/>
+                        </connections>
+                    </collectionView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Yn-6j-Sqz">
+                        <rect key="frame" x="8" y="8" width="100" height="100"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Martine, 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky8-iG-Dp2">
+                        <rect key="frame" x="8" y="110" width="100" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contacts Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="r8a-XZ-Jf2">
+                        <rect key="frame" x="116" y="11" width="20" height="20"/>
+                        <animations/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Location Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="Ppd-fp-dVP">
+                        <rect key="frame" x="116" y="36" width="20" height="20"/>
+                        <animations/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Graduation Cap Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="bhb-vQ-Xcs">
+                        <rect key="frame" x="116" y="61" width="20" height="20"/>
+                        <animations/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Smoking Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="9UC-kb-EJm">
+                        <rect key="frame" x="116" y="85" width="20" height="20"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ram-w4-f6S">
+                        <rect key="frame" x="208" y="83" width="32" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Children-50" translatesAutoresizingMaskIntoConstraints="NO" id="yPn-Zm-c7r">
+                        <rect key="frame" x="180" y="86" width="20" height="20"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waY-1Q-pd9">
+                        <rect key="frame" x="144" y="8" width="168" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Berlin - 15745" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1N-AY-iPb">
+                        <rect key="frame" x="144" y="33" width="168" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Engineer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyZ-uF-6zq">
+                        <rect key="frame" x="144" y="58" width="168" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ro9-LP-dH7">
+                        <rect key="frame" x="144" y="82" width="32" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="KSmokeUser" destination="ro9-LP-dH7" id="d9g-Xe-hzx"/>
+                <outlet property="collectionView" destination="NOg-f6-B8r" id="KUk-pD-eWq"/>
+                <outlet property="kCityPostcode" destination="O1N-AY-iPb" id="joV-id-5gm"/>
+                <outlet property="kFirstNameAge" destination="ky8-iG-Dp2" id="lMB-Mu-ILc"/>
+                <outlet property="kJobTitle" destination="HyZ-uF-6zq" id="k1B-vE-j9x"/>
+                <outlet property="kName" destination="waY-1Q-pd9" id="0YE-lR-u33"/>
+                <outlet property="kUserImage" destination="4Yn-6j-Sqz" id="I29-z6-h1l"/>
+                <outlet property="kWishForChildren" destination="ram-w4-f6S" id="9rS-GA-yVH"/>
+            </connections>
+            <point key="canvasLocation" x="83" y="541.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Children-50" width="50" height="50"/>
+        <image name="Contacts Filled-50" width="50" height="50"/>
+        <image name="Graduation Cap Filled-50" width="50" height="50"/>
+        <image name="Location Filled-50" width="50" height="50"/>
+        <image name="Smoking Filled-50" width="50" height="50"/>
+    </resources>
+</document>
