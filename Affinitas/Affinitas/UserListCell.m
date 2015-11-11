@@ -17,6 +17,11 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.kUserImage.layer.shadowColor = [UIColor purpleColor].CGColor;
+    self.kUserImage.layer.shadowOffset = CGSizeMake(0, 1);
+    self.kUserImage.layer.shadowOpacity = 1;
+    self.kUserImage.layer.shadowRadius = 1.0;
+    self.kUserImage.clipsToBounds = NO;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -40,17 +45,19 @@
 }
 
 -(void)setUserTitle:(AFUsers*)userInfo{
-    self.kUserHeader.text = [NSString stringWithFormat:@"%@ ,%@",[userInfo valueForKey:@"firstname"],[userInfo valueForKey:@"age"]];
+    self.kUserHeader.text = [NSString stringWithFormat:@"%@, %@",[userInfo valueForKey:@"firstname"],[userInfo valueForKey:@"age"]];
 }
 
 -(void)setLocationTitle:(AFUsers*)userInfo{
     self.kUserLocation.text = [NSString stringWithFormat:@"searching in  %@",[userInfo valueForKey:@"city"]];
 }
 
+-(NSString*)replaceURL:(AFUsers*)url{
+    return [[url valueForKey:@"image_url"] stringByReplacingOccurrencesOfString:@"/profiles.php" withString:@""];
+}
+
 -(void)setUserImage:(AFUsers*)userInfo{
-    NSURL *imageURL = [[NSURL alloc] initWithString:[[userInfo valueForKey:@"image_url"] stringByReplacingOccurrencesOfString:@"/profiles.php"
-                                                                                                                   withString:@""]];
-    NSLog(@"%@",imageURL);
+    NSURL *imageURL = [[NSURL alloc] initWithString:[self replaceURL:userInfo]];
     if (imageURL != nil) {
         SDWebImageDownloader *downloader = [SDWebImageDownloader sharedDownloader];
         [downloader downloadImageWithURL:imageURL

@@ -7,33 +7,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="UserListCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="KGk-i7-Jjw" customClass="UserListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-ys-SMg">
-                        <rect key="frame" x="6" y="5" width="60" height="60"/>
+                        <rect key="frame" x="6" y="10" width="100" height="100"/>
                         <animations/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="searching in London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0G-mt-kX3">
-                        <rect key="frame" x="74" y="35" width="219" height="17"/>
+                        <rect key="frame" x="117" y="49" width="169" height="17"/>
                         <animations/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.40383671465968585" green="0.40383671465968585" blue="0.40383671465968585" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Angelina, 31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt2-lN-RHi">
-                        <rect key="frame" x="74" y="12" width="219" height="21"/>
+                        <rect key="frame" x="117" y="26" width="154" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.27241492146596857" green="0.27241492146596857" blue="0.27241492146596857" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Forward-50" translatesAutoresizingMaskIntoConstraints="NO" id="MHp-hV-lWC">
+                        <rect key="frame" x="294" y="48" width="19" height="23"/>
+                        <animations/>
+                    </imageView>
                 </subviews>
                 <animations/>
+                <color key="backgroundColor" red="0.97733274201026865" green="0.97595625830645383" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
             <animations/>
             <connections>
@@ -41,7 +46,10 @@
                 <outlet property="kUserImage" destination="Qnl-ys-SMg" id="Yfk-ga-BEw"/>
                 <outlet property="kUserLocation" destination="q0G-mt-kX3" id="DPw-dA-PfN"/>
             </connections>
-            <point key="canvasLocation" x="341" y="305"/>
+            <point key="canvasLocation" x="341" y="330.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Forward-50" width="50" height="50"/>
+    </resources>
 </document>
