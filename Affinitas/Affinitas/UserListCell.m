@@ -8,6 +8,7 @@
 
 #import "UserListCell.h"
 #import "AFUsers.h"
+#import "MBProgressHUD.h"
 
 #define K_CELL  @"UserListCell"
 
@@ -36,10 +37,12 @@
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:K_CELL owner:self options:nil];
         self = nib[0];
         _viewController = controller;
+        
         [self setUserTitle:user];
         [self setLocationTitle:user];
         [self setUserImage:user];
         [self setUserImagesCountTitle:user];
+        
         DKLog(K_VERBOSE_MOBILE_API_JSON, @"User List --> {%@}",user);
     }
     return  self;
