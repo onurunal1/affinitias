@@ -27,6 +27,7 @@
     self.kUserImage.layer.shadowOpacity = 1;
     self.kUserImage.layer.shadowRadius = 1.0;
     self.kUserImage.clipsToBounds = NO;
+    self.kUserImage.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

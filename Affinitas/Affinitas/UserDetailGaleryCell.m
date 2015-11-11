@@ -19,6 +19,7 @@
     self.kThumbImage.layer.shadowOpacity = 1;
     self.kThumbImage.layer.shadowRadius = 1.0;
     self.kThumbImage.clipsToBounds = NO;
+    self.kThumbImage.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 
