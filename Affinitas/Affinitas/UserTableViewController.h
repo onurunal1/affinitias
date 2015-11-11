@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFUsers.h"
+#import "AFUserRoot.h"
 
 @interface UserTableViewController : UITableViewController <UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,strong) AFUserRoot *userList;
 
 @end

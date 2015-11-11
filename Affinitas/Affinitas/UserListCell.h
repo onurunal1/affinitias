@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFUsers.h"
 
 @interface UserListCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *kUserImage;
-@property (weak, nonatomic) IBOutlet UILabel *kUserName;
-@property (weak, nonatomic) IBOutlet UILabel *kUserAge;
-@property (weak, nonatomic) IBOutlet UILabel *kUserCity;
+@property (weak, nonatomic) IBOutlet UILabel *kUserHeader;
+@property (weak, nonatomic) IBOutlet UILabel *kUserLocation;
 
-- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _array:(NSMutableArray*)_array;
+- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _user:(AFUsers*)user;
+
+-(void)setUserTitle:(AFUsers*)userInfo;
+-(void)setLocationTitle:(AFUsers*)userInfo;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "UserListCell.h"
+#import "AFUsers.h"
 
 @implementation UserListCell{
     UITableViewController *_viewController;
@@ -24,30 +25,26 @@
     // Configure the view for the selected state
 }
 
-- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _array:(NSMutableArray*)_array{
+- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _user:(AFUsers*)user{
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:K_CELL];
     if (self) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:K_CELL owner:self options:nil];
         self = nib[0];
         _viewController = controller;
-        DKLog(K_VERBOSE_MOBILE_API_JSON, @"Info Question --> {%@}",_array);
+        [self setUserTitle:user];
+        [self setLocationTitle:user];
+        DKLog(K_VERBOSE_MOBILE_API_JSON, @"User List --> {%@}",user);
     }
     return  self;
 }
 
-- (void)setUserName{
-   
-}
-- (void)setUserAge{
-    
-}
-- (void)setUserLocation{
-    
-}
-- (void)setUserImage{
-    
+-(void)setUserTitle:(AFUsers*)userInfo{
+    self.kUserHeader.text = [NSString stringWithFormat:@"%@ ,%@",[userInfo valueForKey:@"firstname"],[userInfo valueForKey:@"age"]];
 }
 
+-(void)setLocationTitle:(AFUsers*)userInfo{
+    self.kUserLocation.text = [NSString stringWithFormat:@"searching in  %@",[userInfo valueForKey:@"city"]];
+}
 
 
 @end

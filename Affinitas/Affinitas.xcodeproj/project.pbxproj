@@ -20,6 +20,8 @@
 		37CE71441BF2B6C600C72F96 /* UserDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE71431BF2B6C600C72F96 /* UserDetailTableViewController.m */; };
 		37CE71491BF2B7D300C72F96 /* UserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE71471BF2B7D300C72F96 /* UserListCell.m */; };
 		37CE714A1BF2B7D300C72F96 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CE71481BF2B7D300C72F96 /* UserListCell.xib */; };
+		37CE714D1BF336D500C72F96 /* AFUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE714C1BF336D500C72F96 /* AFUsers.m */; };
+		37CE71501BF3404100C72F96 /* AFUserRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE714F1BF3404100C72F96 /* AFUserRoot.m */; };
 		FABD0BED87510F24CF6A3F34 /* libPods-Affinitas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC0CFB1289C10704A9AEC01 /* libPods-Affinitas.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,10 @@
 		37CE71461BF2B7D300C72F96 /* UserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListCell.h; sourceTree = "<group>"; };
 		37CE71471BF2B7D300C72F96 /* UserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListCell.m; sourceTree = "<group>"; };
 		37CE71481BF2B7D300C72F96 /* UserListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
+		37CE714B1BF336D500C72F96 /* AFUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFUsers.h; sourceTree = "<group>"; };
+		37CE714C1BF336D500C72F96 /* AFUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFUsers.m; sourceTree = "<group>"; };
+		37CE714E1BF3404100C72F96 /* AFUserRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFUserRoot.h; sourceTree = "<group>"; };
+		37CE714F1BF3404100C72F96 /* AFUserRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFUserRoot.m; sourceTree = "<group>"; };
 		D3722019BAE834EB9477EE18 /* Pods-Affinitas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affinitas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas.debug.xcconfig"; sourceTree = "<group>"; };
 		F2EC362BBB5F6193D1C7D9F0 /* Pods-Affinitas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affinitas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Affinitas/Pods-Affinitas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +118,10 @@
 				371C1FCE1BF2793800782949 /* Affinitas.xcdatamodeld */,
 				37CE713C1BF28CA500C72F96 /* AFMobileApiManager.h */,
 				37CE713D1BF28CA500C72F96 /* AFMobileApiManager.m */,
+				37CE714B1BF336D500C72F96 /* AFUsers.h */,
+				37CE714C1BF336D500C72F96 /* AFUsers.m */,
+				37CE714E1BF3404100C72F96 /* AFUserRoot.h */,
+				37CE714F1BF3404100C72F96 /* AFUserRoot.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -319,9 +329,11 @@
 			files = (
 				371C1FC71BF2793800782949 /* AppDelegate.m in Sources */,
 				37CE71491BF2B7D300C72F96 /* UserListCell.m in Sources */,
+				37CE71501BF3404100C72F96 /* AFUserRoot.m in Sources */,
 				37CE71441BF2B6C600C72F96 /* UserDetailTableViewController.m in Sources */,
 				37CE71411BF2B5E600C72F96 /* UserTableViewController.m in Sources */,
 				37CE713E1BF28CA500C72F96 /* AFMobileApiManager.m in Sources */,
+				37CE714D1BF336D500C72F96 /* AFUsers.m in Sources */,
 				371C1FC41BF2793800782949 /* main.m in Sources */,
 				371C1FD01BF2793800782949 /* Affinitas.xcdatamodeld in Sources */,
 			);

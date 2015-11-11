@@ -8,31 +8,32 @@
 
 #import "UserTableViewController.h"
 #import "UserListCell.h"
+#import "AFUsers.h"
 
 #define K_USER_CELL                @"UserListCell"
 
 
-@interface UserTableViewController (){
-    NSMutableArray *userList;
-}
+@interface UserTableViewController ()
 @end
 
 @implementation UserTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self; 
     [self fetchData];
 }
 
 -(void)fetchData{
     [[AFMobileApiManager sharedClient] getUserListWithCompletion:^(id response) {
-        userList = response[API_JSON_RESPONSE_DATA];
-        NSLog(@"User %@",userList);
+        [self setData:response];
     } error:^(NSError *error) {
         NSLog(@"Err : %@",error.description);
     }];
+}
+
+-(void)setData:(AFUserRoot*)instance{
+    self.userList = instance;
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +48,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [userList count];
+    return self.userList.data.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -57,18 +58,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UserListCell *cell = [self.tableView dequeueReusableCellWithIdentifier:K_USER_CELL];
     if (!cell)
-        cell = [[UserListCell alloc] initWithCustomNibAndController:self _array:userList[indexPath.row]];
+        cell = [[UserListCell alloc] initWithCustomNibAndController:self _user:self.userList.data[indexPath.row]];
     return  cell;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

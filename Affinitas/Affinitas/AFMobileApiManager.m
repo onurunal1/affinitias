@@ -7,6 +7,7 @@
 //
 
 #import "AFMobileApiManager.h"
+#import "AFUserRoot.h"
 
 @implementation AFMobileApiManager
 
@@ -56,13 +57,23 @@
 }
 
 #pragma mark -  API REQUEST CALL
-- (void)sendRequestForPath:(NSString *)path requestType:(NSString *)type parameters:(NSDictionary *)parameters completion:(void (^)(NSDictionary *response))completionBlock error:(void (^)(NSError *error))errorBlock {
+- (void)sendRequestForPath:(NSString *)path requestType:(NSString *)type parameters:(NSDictionary *)parameters completion:(void (^)(JSONModel *response))completionBlock error:(void (^)(NSError *error))errorBlock {
    
     DKLog(K_VERBOSE_MOBILE_API_CLIENT, @"REQUEST URL: %@", [self.baseURL absoluteString]);
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:[self.baseURL absoluteString] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         DKLog(K_VERBOSE_MOBILE_API_JSON, @"JSON Response: %@", responseObject);
-        completionBlock(responseObject);
+        AFUserRoot *rootUserList;
+        if ([[parameters valueForKey:PARAMATER_ACTION] isEqualToString:PARAMATER_USER_LIST]) {
+            NSMutableArray *arr = responseObject;
+            NSString* json = nil;
+            NSError* error = nil;
+            NSData *data = [NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:&error];
+            json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            rootUserList = [[AFUserRoot alloc] initWithString:json error:&error];
+            completionBlock(rootUserList);
+        }
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         errorBlock(error);
