@@ -13,7 +13,9 @@
 
 #define K_USER_CELL                @"UserListCell"
 
-@interface UserTableViewController ()
+@interface UserTableViewController (){
+    UserDetailTableViewController *detailData;
+}
 @end
 
 @implementation UserTableViewController
@@ -63,9 +65,19 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString* uID =[self.userList.data[indexPath.row] valueForKey:@"id"];
-    UserDetailTableViewController *detailData = [[UserDetailTableViewController alloc] init];
-    detailData.userId = uID;
+    [[AFMobileApiManager sharedClient] getUserDetailWithCompletion:uID errBlock:^(id response) {
+        [self setDetailData:response];
+    } error:^(NSError *error) {
+        NSLog(@"Err : %@",error.description);
+    }];
+    
+}
+
+-(void)setDetailData:(AFUserDetailRoot*)instance{
+    detailData = [[UserDetailTableViewController alloc] init];
+    detailData.userDetailList = instance;
     [self.navigationController pushViewController:detailData animated:YES];
 }
+
 
 @end

@@ -12,9 +12,20 @@
 
 @implementation UserDetailGaleryCell
 
+- (void)awakeFromNib {
+    // Initialization code
+    self.kThumbImage.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.kThumbImage.layer.shadowOffset = CGSizeMake(0, 1);
+    self.kThumbImage.layer.shadowOpacity = 1;
+    self.kThumbImage.layer.shadowRadius = 1.0;
+    self.kThumbImage.clipsToBounds = NO;
+}
+
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
+    
     if (self) {
         // Initialization code
         NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"UserDetailGaleryCell" owner:self options:nil];
