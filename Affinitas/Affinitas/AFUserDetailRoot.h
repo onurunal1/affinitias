@@ -10,7 +10,7 @@
 #import "AFUserDetail.h"
 
 @interface AFUserDetailRoot : JSONModel
-
+//This model collects JSON which is responded by calling with "action == detail" parameter
 @property(nonatomic) BOOL success;
 @property(nonatomic) AFUserDetail *data;
 

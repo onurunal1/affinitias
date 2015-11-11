@@ -18,24 +18,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    // Blocked for testing
-    /*
-    [[AFMobileApiManager sharedClient] getUserListWithCompletion:^(id response) {
-        NSArray *arr = response[API_JSON_RESPONSE_DATA];
-        NSLog(@"User %@",arr[0]);
-    } error:^(NSError *error) {
-        NSLog(@"Err : %@",error.description);
-    }];
-    
-    [[AFMobileApiManager sharedClient] getUserDetailWithCompletion:@"953aae5e-cd98-4f44-80cf-d8512ed082ca" errBlock:^(id response) {
-        NSArray *arrDetail = response[API_JSON_RESPONSE_DATA];
-        NSLog(@"User Detail %@",arrDetail);
-    } error:^(NSError *error) {
-        NSLog(@"Err : %@",error.description);
-    }];
-    */
-     
     return YES;
 }
 

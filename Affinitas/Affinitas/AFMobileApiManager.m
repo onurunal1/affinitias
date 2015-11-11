@@ -12,6 +12,7 @@
 
 @implementation AFMobileApiManager
 
+//Shared Instance
 + (AFMobileApiManager *)sharedClient {
     static AFMobileApiManager *sharedClient = nil;
     static dispatch_once_t onceToken;
@@ -32,6 +33,7 @@
 }
 
 #pragma mark - Client helper methods
+//Get the base URL as constants
 
 + (NSString *)baseURL {
     return MOBILE_BASE_URL_DE;
@@ -58,6 +60,9 @@
 }
 
 #pragma mark -  API REQUEST CALL
+// SEND Request Method
+// @path : it performs api's path if exists
+// @requestType : it performs request types such as GET etc..
 - (void)sendRequestForPath:(NSString *)path requestType:(NSString *)type parameters:(NSDictionary *)parameters completion:(void (^)(JSONModel *response))completionBlock error:(void (^)(NSError *error))errorBlock {
    
     DKLog(K_VERBOSE_MOBILE_API_CLIENT, @"REQUEST URL: %@", [self.baseURL absoluteString]);
@@ -65,6 +70,7 @@
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     [manager.requestSerializer setValue:API_HEADER_ACCEPT forHTTPHeaderField:API_HEADER_JSON];
+    
     [manager GET:[self.baseURL absoluteString] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *arr = responseObject;
         NSString* json = nil;
@@ -82,7 +88,9 @@
             completionBlock(rootUserDetail);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+        DKLog(K_MOBILE_API_ERROR_HANDLING, @"HTTP Error Code :%@", [operation.response statusCode]);
+        DKLog(K_MOBILE_API_ERROR_HANDLING, @"---------------------------------------------------");
+        DKLog(K_MOBILE_API_ERROR_HANDLING, @"%@", error.description);
         errorBlock(error);
     }];
 }
