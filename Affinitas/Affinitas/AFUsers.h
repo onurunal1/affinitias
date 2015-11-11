@@ -10,6 +10,7 @@
 #import "JSONModel.h"
 
 @interface AFUsers : JSONModel
+//This model collects JSON which is responded by calling with "action == list" && "id == userId" parameter
 
 @property(nonatomic) NSString* _id;
 @property(nonatomic) NSString* firstname;

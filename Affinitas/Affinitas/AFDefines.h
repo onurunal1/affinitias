@@ -18,8 +18,6 @@
 #define K_VERBOSE_MOBILE_API_JSON                    NO
 #define K_MOBILE_API_ERROR_HANDLING                  YES
 
-
-
 // Color and Style Defines
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define UIColorNavbarBackground   ([UIColor colorWithRed:0.267 green:0.6 blue:0.808 alpha:1])
