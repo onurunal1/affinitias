@@ -65,6 +65,7 @@
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     [manager.requestSerializer setValue:API_HEADER_ACCEPT forHTTPHeaderField:API_HEADER_JSON];
+    
     [manager GET:[self.baseURL absoluteString] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *arr = responseObject;
         NSString* json = nil;
@@ -82,7 +83,9 @@
             completionBlock(rootUserDetail);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+        DKLog(K_MOBILE_API_ERROR_HANDLING, @"HTTP Error Code :%@", [operation.response statusCode]);
+        DKLog(K_MOBILE_API_ERROR_HANDLING, @"---------------------------------------------------");
+        DKLog(K_MOBILE_API_ERROR_HANDLING, @"%@", error.description);
         errorBlock(error);
     }];
 }
