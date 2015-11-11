@@ -21,7 +21,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Partner Suggestions" id="2PU-Xd-QqK"/>
                     <connections>
-                        <segue destination="l9Q-vp-j62" kind="push" identifier="detailSegue" id="uRM-a0-4vF"/>
+                        <segue destination="l9Q-vp-j62" kind="push" identifier="detailSegue" id="Myy-bL-cQD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nM0-Qo-15z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,7 +56,7 @@
         <scene sceneID="q9D-X5-lmR">
             <objects>
                 <tableViewController id="l9Q-vp-j62" customClass="UserDetailTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2fg-yI-9Xh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2fg-yI-9Xh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
@@ -66,7 +66,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U26-PD-Zig" id="YrR-t0-0jY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>

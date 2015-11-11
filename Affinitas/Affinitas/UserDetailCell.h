@@ -8,11 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "KASlideShow.h"
+#import "AFUserDetail.h"
+#import "AFUserDetailRoot.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
-@interface UserDetailCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet KASlideShow *slideShow;
 
-- (IBAction)PreviousImage:(id)sender;
-- (IBAction)NextImage:(id)sender;
+@interface UserDetailCell : UITableViewCell<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _user:(AFUserDetailRoot*)user;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property (weak, nonatomic) IBOutlet UILabel *kFirstNameAge;
+@property (weak, nonatomic) IBOutlet UILabel *kName;
+@property (weak, nonatomic) IBOutlet UILabel *kCityPostcode;
+@property (weak, nonatomic) IBOutlet UILabel *kJobTitle;
+@property (weak, nonatomic) IBOutlet UILabel *KSmokeUser;
+@property (weak, nonatomic) IBOutlet UILabel *kWishForChildren;
 
 @end

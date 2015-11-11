@@ -143,6 +143,19 @@ typedef NS_ENUM(NSInteger, KASlideShowSlideMode) {
     }
 }
 
+- (void) addImagesFromURL:(NSArray *) names
+{
+    for(NSString * name in names){
+        [self addImage:[UIImage imageNamed:name]];
+    }
+}
+
+-(NSString*)replaceURL:(NSString*)url{
+    return [url stringByReplacingOccurrencesOfString:@"/profiles.php" withString:@""];
+}
+
+
+
 - (void) setImagesDataSource:(NSMutableArray *)array {
     self.images = array;
     

@@ -8,8 +8,11 @@
 
 #import "UserDetailCell.h"
 #import "AFUserDetail.h"
+#import "AFUserDetailRoot.h"
+#import "UserDetailGaleryCell.h"
 
-#define K_CELL  @"UserDetailCell"
+#define K_CELL          @"UserDetailCell"
+#define K_CELL_GALERY   @"UserDetailGaleryCell"
 
 
 @implementation UserDetailCell{
@@ -26,21 +29,40 @@
     // Configure the view for the selected state
 }
 
-- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _user:(AFUserDetail*)user{
+- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _user:(AFUserDetailRoot*)user{
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:K_CELL];
     if (self) {
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:K_CELL owner:self options:nil];
         self = nib[0];
         _viewController = controller;
         DKLog(K_VERBOSE_MOBILE_API_JSON, @"User List --> {%@}",user);
+        [self.collectionView registerClass:[UserDetailGaleryCell class] forCellWithReuseIdentifier:@"UserDetailGaleryCell"];
+        self.collectionView.delegate = self;
+        self.collectionView.dataSource = self;
+        //[self setUserImages:user];
     }
     return  self;
 }
 
 
-- (IBAction)PreviousImage:(id)sender {
+-(void)setUserImages:(AFUserDetail*)images{
+    NSArray *imgList = [images valueForKey:@"images"];
 }
 
-- (IBAction)NextImage:(id)sender {
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
 }
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 100;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UserDetailGaleryCell *cell = (UserDetailGaleryCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"K_CELL_GALERY" forIndexPath:indexPath];
+    return cell;
+}
+
+
+
+
 @end
