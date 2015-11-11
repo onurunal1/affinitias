@@ -12,5 +12,6 @@ pod 'MBProgressHUD', '~> 0.9.1'
 pod 'DKHelper', '~> 0.9.5'
 pod 'MagicalRecord'
 pod 'SDWebImage', '~>3.7'
+pod 'KASlideShow'
 end
 

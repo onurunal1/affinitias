@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KASlideShow.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0AB6DB946CC39218E9137E64556AD4E7</key>
+		<key>3979E9371B998ECBBEBD7251CDAAE4F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A34AB15453CAB131508E8AC8369805C5</key>
+		<key>BEB95BB7D5767A2DC8C5DCCE5CBD6A11</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -88,6 +93,11 @@
 			<true/>
 		</dict>
 		<key>E07BD06AE35B220CCB6DE0237CE45A6C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBD81A718776BF6A82FEA09EBE1E4022</key>
 		<dict>
 			<key>primary</key>
 			<true/>

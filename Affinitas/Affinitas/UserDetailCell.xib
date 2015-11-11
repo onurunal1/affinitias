@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserDetailCell" rowHeight="406" id="KGk-i7-Jjw" customClass="UserDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="406"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="405"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyt-oQ-LWa">
+                        <rect key="frame" x="272" y="97" width="50" height="50"/>
+                        <animations/>
+                        <state key="normal" image="Forward-64"/>
+                        <connections>
+                            <action selector="NextImage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DZa-wl-Ea6"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSs-ah-GYD">
+                        <rect key="frame" x="0.0" y="98" width="50" height="50"/>
+                        <animations/>
+                        <state key="normal" image="Back-64"/>
+                        <connections>
+                            <action selector="PreviousImage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ULX-52-erW"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3t-O2-Ifg" customClass="KASlideShow">
+                        <rect key="frame" x="54" y="28" width="211" height="190"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </subviews>
+                <animations/>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="slideShow" destination="R3t-O2-Ifg" id="IEb-U5-vd4"/>
+            </connections>
+            <point key="canvasLocation" x="83" y="492"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Back-64" width="64" height="64"/>
+        <image name="Forward-64" width="64" height="64"/>
+    </resources>
+</document>

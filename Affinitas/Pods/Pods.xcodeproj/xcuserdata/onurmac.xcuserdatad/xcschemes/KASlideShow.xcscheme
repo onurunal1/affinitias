@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B81D0F1261767A791C52457A'
-               BlueprintName = 'DKHelper'
+               BlueprintIdentifier = '59F20EF6F81FF3F89DB74A02'
+               BlueprintName = 'KASlideShow'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libDKHelper.a'>
+               BuildableName = 'libKASlideShow.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

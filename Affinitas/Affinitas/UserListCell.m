@@ -9,11 +9,11 @@
 #import "UserListCell.h"
 #import "AFUsers.h"
 
+#define K_CELL  @"UserListCell"
+
 @implementation UserListCell{
     UITableViewController *_viewController;
 }
-
-#define K_CELL  @"UserListCell"
 
 - (void)awakeFromNib {
     // Initialization code
@@ -26,7 +26,6 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
 
