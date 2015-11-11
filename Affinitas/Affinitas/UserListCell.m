@@ -33,6 +33,7 @@
         _viewController = controller;
         [self setUserTitle:user];
         [self setLocationTitle:user];
+        [self setUserImage:user];
         DKLog(K_VERBOSE_MOBILE_API_JSON, @"User List --> {%@}",user);
     }
     return  self;
@@ -46,5 +47,15 @@
     self.kUserLocation.text = [NSString stringWithFormat:@"searching in  %@",[userInfo valueForKey:@"city"]];
 }
 
+-(void)setUserImage:(AFUsers*)userInfo{
+    NSURL *imageURL = [[NSURL alloc] initWithString:[userInfo valueForKey:@"image_url"]];
+    if (imageURL != nil) {
+        [self.kUserImage sd_setImageWithURL:imageURL placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            if (error) {
+                NSLog(@"%@",error.description);
+            }
+        }];
+    }
+}
 
 @end

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A3F0D25D85C118D59A787157'
+               BlueprintIdentifier = 'FBFBC825136AF8C1ABCD4543'
                BlueprintName = 'DKHelper'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libDKHelper.a'>

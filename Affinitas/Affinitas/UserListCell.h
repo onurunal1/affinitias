@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "AFUsers.h"
 
 @interface UserListCell : UITableViewCell
@@ -19,5 +20,6 @@
 
 -(void)setUserTitle:(AFUsers*)userInfo;
 -(void)setLocationTitle:(AFUsers*)userInfo;
+-(void)setUserImage:(AFUsers*)userInfo;
 
 @end
