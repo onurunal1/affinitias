@@ -15,7 +15,7 @@
 
 @interface UserDetailCell : UITableViewCell<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _user:(AFUserDetailRoot*)user;
+- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller detail:(AFUserDetail*)detail;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -25,5 +25,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *kJobTitle;
 @property (weak, nonatomic) IBOutlet UILabel *KSmokeUser;
 @property (weak, nonatomic) IBOutlet UILabel *kWishForChildren;
+@property (weak, nonatomic) IBOutlet UIImageView *kUserImage;
 
 @end

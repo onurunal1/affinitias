@@ -20,9 +20,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Partner Suggestions" id="2PU-Xd-QqK"/>
-                    <connections>
-                        <segue destination="l9Q-vp-j62" kind="push" identifier="detailSegue" id="Myy-bL-cQD"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nM0-Qo-15z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,6 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.93725490199999995" green="0.30980392159999998" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="0.0"/>
@@ -63,7 +61,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="U26-PD-Zig">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U26-PD-Zig" id="YrR-t0-0jY">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>

@@ -21,6 +21,11 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.kUserImage.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.kUserImage.layer.shadowOffset = CGSizeMake(0, 1);
+    self.kUserImage.layer.shadowOpacity = 1;
+    self.kUserImage.layer.shadowRadius = 1.0;
+    self.kUserImage.clipsToBounds = NO;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -29,17 +34,17 @@
     // Configure the view for the selected state
 }
 
-- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _user:(AFUserDetailRoot*)user{
+- (instancetype)initWithCustomNibAndController:(UITableViewController *)controller detail:(AFUserDetail*)detail{
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:K_CELL];
     if (self) {
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:K_CELL owner:self options:nil];
         self = nib[0];
         _viewController = controller;
-        DKLog(K_VERBOSE_MOBILE_API_JSON, @"User List --> {%@}",user);
-        [self.collectionView registerClass:[UserDetailGaleryCell class] forCellWithReuseIdentifier:@"UserDetailGaleryCell"];
+        DKLog(K_VERBOSE_MOBILE_API_JSON, @"User List --> {%@}",detail);
+        [self.collectionView registerClass:[UserDetailGaleryCell class] forCellWithReuseIdentifier:K_CELL_GALERY];
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
-        //[self setUserImages:user];
+        [self setUserImages:detail];
     }
     return  self;
 }
@@ -58,11 +63,8 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UserDetailGaleryCell *cell = (UserDetailGaleryCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"K_CELL_GALERY" forIndexPath:indexPath];
+    UserDetailGaleryCell *cell = (UserDetailGaleryCell *)[collectionView dequeueReusableCellWithReuseIdentifier:K_CELL_GALERY forIndexPath:indexPath];
     return cell;
 }
-
-
-
 
 @end

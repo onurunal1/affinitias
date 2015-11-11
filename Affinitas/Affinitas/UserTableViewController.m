@@ -63,18 +63,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString* uID =[self.userList.data[indexPath.row] valueForKey:@"id"];
-    [self performSegueWithIdentifier:@"detailSegue" sender:uID];
-
+    UserDetailTableViewController *detailData = [[UserDetailTableViewController alloc] init];
+    detailData.userId = uID;
+    [self.navigationController pushViewController:detailData animated:YES];
 }
-
-#pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    UserDetailTableViewController *detailData = segue.destinationViewController;
-    if ([[segue identifier] isEqualToString:@"detailSegue"])
-    {
-        detailData.userId = sender;
-    }
-}
-
 
 @end
