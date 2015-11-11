@@ -9,6 +9,7 @@
 #import "UserTableViewController.h"
 #import "UserListCell.h"
 #import "AFUsers.h"
+#import "UserDetailTableViewController.h"
 
 #define K_USER_CELL                @"UserListCell"
 
@@ -42,7 +43,6 @@
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -61,5 +61,21 @@
         cell = [[UserListCell alloc] initWithCustomNibAndController:self _user:self.userList.data[indexPath.row]];
     return  cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString* uID =[self.userList.data[indexPath.row] valueForKey:@"id"];
+    [self performSegueWithIdentifier:@"detailSegue" sender:uID];
+
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UserDetailTableViewController *detailData = segue.destinationViewController;
+    if ([[segue identifier] isEqualToString:@"detailSegue"])
+    {
+        detailData.userId = sender;
+    }
+}
+
 
 @end

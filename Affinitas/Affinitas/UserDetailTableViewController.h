@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFUserDetailRoot.h"
 
 @interface UserDetailTableViewController : UITableViewController
+
+@property (strong, nonatomic) NSString *userId;
+@property (nonatomic,strong) AFUserDetailRoot *userDetailList;
+
 
 @end

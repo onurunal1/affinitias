@@ -8,6 +8,7 @@
 
 #import "AFMobileApiManager.h"
 #import "AFUserRoot.h"
+#import "AFUserDetailRoot.h"
 
 @implementation AFMobileApiManager
 
@@ -37,7 +38,7 @@
 }
 
 //Init parameter to fetch all user list
-//action = list
+//@Param : action = list
 
 - (NSMutableDictionary*)listParam{
     NSMutableDictionary *paramsDict = [NSMutableDictionary dictionary];
@@ -65,18 +66,21 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     [manager.requestSerializer setValue:API_HEADER_ACCEPT forHTTPHeaderField:API_HEADER_JSON];
     [manager GET:[self.baseURL absoluteString] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSMutableArray *arr = responseObject;
+        NSString* json = nil;
+        NSError* error = nil;
+        NSData *data = [NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:&error];
+        json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         DKLog(K_VERBOSE_MOBILE_API_JSON, @"JSON Response: %@", responseObject);
-        AFUserRoot *rootUserList;
-        if ([[parameters valueForKey:PARAMATER_ACTION] isEqualToString:PARAMATER_USER_LIST]) {
-            NSMutableArray *arr = responseObject;
-            NSString* json = nil;
-            NSError* error = nil;
-            NSData *data = [NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:&error];
-            json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            rootUserList = [[AFUserRoot alloc] initWithString:json error:&error];
-            completionBlock(rootUserList);
-        }
         
+        //Decide which objects that should be returned according to reqeust parameter
+        if ([[parameters valueForKey:PARAMATER_ACTION] isEqualToString:PARAMATER_USER_LIST]) {
+            AFUserRoot *rootUserList = [[AFUserRoot alloc] initWithString:json error:&error];
+            completionBlock(rootUserList);
+        }else if([[parameters valueForKey:PARAMATER_ACTION] isEqualToString:PARAMATER_USER_DETAIL]){
+            AFUserDetailRoot *rootUserDetail = [[AFUserDetailRoot alloc] initWithString:json error:&error];
+            completionBlock(rootUserDetail);
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         errorBlock(error);

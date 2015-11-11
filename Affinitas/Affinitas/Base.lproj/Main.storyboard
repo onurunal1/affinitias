@@ -20,6 +20,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Partner Suggestions" id="2PU-Xd-QqK"/>
+                    <connections>
+                        <segue destination="l9Q-vp-j62" kind="push" identifier="detailSegue" id="uRM-a0-4vF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nM0-Qo-15z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +63,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="U26-PD-Zig">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U26-PD-Zig" id="YrR-t0-0jY">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -75,10 +78,11 @@
                             <outlet property="delegate" destination="l9Q-vp-j62" id="ksZ-HG-XvX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="KEQ-Mm-Umb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUg-RO-dNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2746" y="154"/>
+            <point key="canvasLocation" x="2850" y="154"/>
         </scene>
     </scenes>
 </document>
