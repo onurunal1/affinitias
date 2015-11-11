@@ -8,27 +8,15 @@
         <!--Users-->
         <scene sceneID="sPo-2e-E8l">
             <objects>
-                <tableViewController id="faM-GV-cUI" customClass="UserTableViewController" sceneMemberID="viewController">
+                <tableViewController id="faM-GV-cUI" customClass="UserDetailTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="I2p-h7-p2g">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XrI-ym-3Hs">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XrI-ym-3Hs" id="vj7-FY-ONZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="faM-GV-cUI" id="NEf-XR-nDe"/>
-                            <outlet property="delegate" destination="faM-GV-cUI" id="N8Y-Lf-DD0"/>
+                            <outlet property="dataSource" destination="faM-GV-cUI" id="zEk-tx-eue"/>
+                            <outlet property="delegate" destination="faM-GV-cUI" id="UJ2-6O-7G2"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Users" id="2PU-Xd-QqK"/>
