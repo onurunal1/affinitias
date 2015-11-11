@@ -17,7 +17,7 @@
     dispatch_once(&onceToken, ^{
         sharedClient = [[AFMobileApiManager alloc] initWithBaseURL:[NSURL URLWithString:self.baseURL]];
         sharedClient.requestSerializer = [AFHTTPRequestSerializer serializer];
-        sharedClient.responseSerializer = [AFJSONResponseSerializer serializer];
+        sharedClient.responseSerializer = [AFHTTPResponseSerializer serializer];
     });
     return sharedClient;
 }
@@ -61,6 +61,9 @@
    
     DKLog(K_VERBOSE_MOBILE_API_CLIENT, @"REQUEST URL: %@", [self.baseURL absoluteString]);
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:API_HEADER_ACCEPT forHTTPHeaderField:API_HEADER_JSON];
     [manager GET:[self.baseURL absoluteString] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         DKLog(K_VERBOSE_MOBILE_API_JSON, @"JSON Response: %@", responseObject);
         AFUserRoot *rootUserList;

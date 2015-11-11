@@ -48,13 +48,28 @@
 }
 
 -(void)setUserImage:(AFUsers*)userInfo{
-    NSURL *imageURL = [[NSURL alloc] initWithString:[userInfo valueForKey:@"image_url"]];
+    NSURL *imageURL = [[NSURL alloc] initWithString:[[userInfo valueForKey:@"image_url"] stringByReplacingOccurrencesOfString:@"/profiles.php"
+                                                                                                                   withString:@""]];
+    NSLog(@"%@",imageURL);
     if (imageURL != nil) {
-        [self.kUserImage sd_setImageWithURL:imageURL placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            if (error) {
-                NSLog(@"%@",error.description);
-            }
-        }];
+        SDWebImageDownloader *downloader = [SDWebImageDownloader sharedDownloader];
+        [downloader downloadImageWithURL:imageURL
+                                 options:0
+                                progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                                    // progression tracking code
+                                }
+                               completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
+                                   if (image && finished) {
+                                       // do something with image
+                                       dispatch_async(dispatch_get_main_queue(), ^{
+                                           self.kUserImage.image = image;
+                                       });
+                                       
+                                   }else{
+                                       NSLog(@"%@",error.description);
+                                   }
+                                       
+                               }];
     }
 }
 
