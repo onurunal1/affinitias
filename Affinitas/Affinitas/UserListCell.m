@@ -17,7 +17,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    self.kUserImage.layer.shadowColor = [UIColor purpleColor].CGColor;
+    self.kUserImage.layer.shadowColor = [UIColor blackColor].CGColor;
     self.kUserImage.layer.shadowOffset = CGSizeMake(0, 1);
     self.kUserImage.layer.shadowOpacity = 1;
     self.kUserImage.layer.shadowRadius = 1.0;
@@ -33,12 +33,13 @@
 - (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _user:(AFUsers*)user{
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:K_CELL];
     if (self) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:K_CELL owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle]loadNibNamed:K_CELL owner:self options:nil];
         self = nib[0];
         _viewController = controller;
         [self setUserTitle:user];
         [self setLocationTitle:user];
         [self setUserImage:user];
+        [self setUserImagesCountTitle:user];
         DKLog(K_VERBOSE_MOBILE_API_JSON, @"User List --> {%@}",user);
     }
     return  self;
@@ -52,8 +53,8 @@
     self.kUserLocation.text = [NSString stringWithFormat:@"searching in  %@",[userInfo valueForKey:@"city"]];
 }
 
--(NSString*)replaceURL:(AFUsers*)url{
-    return [[url valueForKey:@"image_url"] stringByReplacingOccurrencesOfString:@"/profiles.php" withString:@""];
+-(void)setUserImagesCountTitle:(AFUsers*)userInfo{
+    self.kUserImagesCountLabel.text = [(NSNumber*)[userInfo valueForKey:@"total_images"] stringValue];
 }
 
 -(void)setUserImage:(AFUsers*)userInfo{
@@ -79,5 +80,10 @@
                                }];
     }
 }
+
+-(NSString*)replaceURL:(AFUsers*)url{
+    return [[url valueForKey:@"image_url"] stringByReplacingOccurrencesOfString:@"/profiles.php" withString:@""];
+}
+
 
 @end

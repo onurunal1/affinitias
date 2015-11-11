@@ -15,11 +15,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *kUserImage;
 @property (weak, nonatomic) IBOutlet UILabel *kUserHeader;
 @property (weak, nonatomic) IBOutlet UILabel *kUserLocation;
+@property (weak, nonatomic) IBOutlet UILabel *kUserImagesCountLabel;
 
 - (instancetype)initWithCustomNibAndController:(UITableViewController *)controller _user:(AFUsers*)user;
 
 -(void)setUserTitle:(AFUsers*)userInfo;
 -(void)setLocationTitle:(AFUsers*)userInfo;
 -(void)setUserImage:(AFUsers*)userInfo;
+-(void)setUserImagesCountTitle:(AFUsers*)userInfo;
 
 @end

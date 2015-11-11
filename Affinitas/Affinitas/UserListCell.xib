@@ -19,14 +19,14 @@
                         <animations/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="searching in London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0G-mt-kX3">
-                        <rect key="frame" x="117" y="49" width="169" height="17"/>
+                        <rect key="frame" x="114" y="49" width="169" height="17"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.40383671465968585" green="0.40383671465968585" blue="0.40383671465968585" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Angelina, 31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt2-lN-RHi">
-                        <rect key="frame" x="117" y="26" width="154" height="21"/>
+                        <rect key="frame" x="114" y="26" width="154" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.27241492146596857" green="0.27241492146596857" blue="0.27241492146596857" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,6 +36,17 @@
                         <rect key="frame" x="294" y="48" width="19" height="23"/>
                         <animations/>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stack of Photos Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="vrK-8r-q3S">
+                        <rect key="frame" x="114" y="95" width="15" height="15"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biM-oD-1te">
+                        <rect key="frame" x="128" y="93" width="20" height="18"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                        <color key="textColor" red="0.40383671469999999" green="0.40383671469999999" blue="0.40383671469999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <animations/>
                 <color key="backgroundColor" red="0.97733274201026865" green="0.97595625830645383" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,6 +55,7 @@
             <connections>
                 <outlet property="kUserHeader" destination="Nt2-lN-RHi" id="gSk-xd-wJk"/>
                 <outlet property="kUserImage" destination="Qnl-ys-SMg" id="Yfk-ga-BEw"/>
+                <outlet property="kUserImagesCountLabel" destination="biM-oD-1te" id="LAg-Yx-9zN"/>
                 <outlet property="kUserLocation" destination="q0G-mt-kX3" id="DPw-dA-PfN"/>
             </connections>
             <point key="canvasLocation" x="341" y="330.5"/>
@@ -51,5 +63,6 @@
     </objects>
     <resources>
         <image name="Forward-50" width="50" height="50"/>
+        <image name="Stack of Photos Filled-50" width="50" height="50"/>
     </resources>
 </document>
