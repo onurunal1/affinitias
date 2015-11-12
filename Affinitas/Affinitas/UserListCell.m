@@ -49,15 +49,15 @@
 }
 
 -(void)setUserTitle:(AFUsers*)userInfo{
-    self.kUserHeader.text = [NSString stringWithFormat:@"%@, %@",[userInfo valueForKey:@"firstname"],[userInfo valueForKey:@"age"]];
+    self.kUserHeader.text = [NSString stringWithFormat:@"%@, %@",[userInfo valueForKey:JSON_FIRSTNAME],[userInfo valueForKey:JSON_AGE]];
 }
 
 -(void)setLocationTitle:(AFUsers*)userInfo{
-    self.kUserLocation.text = [NSString stringWithFormat:@"searching in  %@",[userInfo valueForKey:@"city"]];
+    self.kUserLocation.text = [NSString stringWithFormat:@"searching in  %@",[userInfo valueForKey:JSON_CITY]];
 }
 
 -(void)setUserImagesCountTitle:(AFUsers*)userInfo{
-    self.kUserImagesCountLabel.text = [(NSNumber*)[userInfo valueForKey:@"total_images"] stringValue];
+    self.kUserImagesCountLabel.text = [(NSNumber*)[userInfo valueForKey:JSON_TOTAL_IMAGES] stringValue];
 }
 
 -(void)setUserImage:(AFUsers*)userInfo{

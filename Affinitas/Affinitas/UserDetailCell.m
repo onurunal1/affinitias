@@ -53,12 +53,12 @@
 }
 
 -(void)setValueForCell:(AFUserDetail*)detail{
-    self.kName.text = [detail valueForKey:@"name"];
-    self.kCityPostcode.text = [NSString stringWithFormat:@"%@, %@",[detail valueForKey:@"city"],[detail valueForKey:@"postcode"]];
-    self.kJobTitle.text = [detail valueForKey:@"job"];
-    self.KSmokeUser.text = [self isFlag:(BOOL)[detail valueForKey:@"smoker"]];
-    self.kWishForChildren.text = [self isFlag:(BOOL)[detail valueForKey:@"wish_for_children"]];
-    self.kFirstNameAge.text = [NSString stringWithFormat:@"%@, %@",[detail valueForKey:@"firstname"],[detail valueForKey:@"age"]];
+    self.kName.text = [detail valueForKey:JSON_NAME];
+    self.kCityPostcode.text = [NSString stringWithFormat:@"%@, %@",[detail valueForKey:JSON_CITY],[detail valueForKey:JSON_POSTCODE]];
+    self.kJobTitle.text = [detail valueForKey:JSON_JOB];
+    self.KSmokeUser.text = [self isFlag:(BOOL)[detail valueForKey:JSON_SMOKER]];
+    self.kWishForChildren.text = [self isFlag:(BOOL)[detail valueForKey:JSON_WISH_FOR]];
+    self.kFirstNameAge.text = [NSString stringWithFormat:@"%@, %@",[detail valueForKey:JSON_FIRSTNAME],[detail valueForKey:JSON_AGE]];
     [self.kUserImage sd_setImageWithURL:[self replaceURL:[detail valueForKey:@"image_url"]]];
 }
 
