@@ -56,8 +56,8 @@
     self.kName.text = [detail valueForKey:@"name"];
     self.kCityPostcode.text = [NSString stringWithFormat:@"%@, %@",[detail valueForKey:@"city"],[detail valueForKey:@"postcode"]];
     self.kJobTitle.text = [detail valueForKey:@"job"];
-    self.KSmokeUser.text = [self isFlag:(BOOL)[detail valueForKey:@"job"]];
-    self.kWishForChildren.text = [self isFlag:(BOOL)[detail valueForKey:@"job"]];
+    self.KSmokeUser.text = [self isFlag:(BOOL)[detail valueForKey:@"smoker"]];
+    self.kWishForChildren.text = [self isFlag:(BOOL)[detail valueForKey:@"wish_for_children"]];
     self.kFirstNameAge.text = [NSString stringWithFormat:@"%@, %@",[detail valueForKey:@"firstname"],[detail valueForKey:@"age"]];
     [self.kUserImage sd_setImageWithURL:[self replaceURL:[detail valueForKey:@"image_url"]]];
 }
