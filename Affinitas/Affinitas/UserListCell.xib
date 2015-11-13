@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,9 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-ys-SMg">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-ys-SMg">
                         <rect key="frame" x="6" y="10" width="100" height="100"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Qnl-ys-SMg" secondAttribute="height" multiplier="1:1" id="3ut-2m-U1P"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="searching in London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0G-mt-kX3">
                         <rect key="frame" x="114" y="49" width="169" height="17"/>
@@ -32,9 +37,12 @@
                         <color key="textColor" red="0.27241492146596857" green="0.27241492146596857" blue="0.27241492146596857" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Forward-50" translatesAutoresizingMaskIntoConstraints="NO" id="MHp-hV-lWC">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forward-50" translatesAutoresizingMaskIntoConstraints="NO" id="MHp-hV-lWC">
                         <rect key="frame" x="294" y="48" width="19" height="23"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="MHp-hV-lWC" secondAttribute="height" multiplier="19:23" id="mq9-GC-tGy"/>
+                        </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stack of Photos Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="vrK-8r-q3S">
                         <rect key="frame" x="114" y="95" width="15" height="15"/>
@@ -50,6 +58,14 @@
                 </subviews>
                 <animations/>
                 <color key="backgroundColor" red="0.97733274201026865" green="0.97595625830645383" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Qnl-ys-SMg" secondAttribute="bottom" constant="2" id="JHm-iE-lyr"/>
+                    <constraint firstItem="Qnl-ys-SMg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-2" id="XNb-lU-5oK"/>
+                    <constraint firstItem="Qnl-ys-SMg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="ZBU-TU-4gv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MHp-hV-lWC" secondAttribute="trailing" constant="-1" id="ZJJ-1M-XTb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="MHp-hV-lWC" secondAttribute="bottom" constant="41" id="mnd-6D-Srb"/>
+                    <constraint firstItem="MHp-hV-lWC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="40" id="sVe-mU-KVH"/>
+                </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>

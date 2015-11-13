@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -15,10 +16,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NOg-f6-B8r">
-                        <rect key="frame" x="10" y="139" width="302" height="357"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="white" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NOg-f6-B8r">
+                        <rect key="frame" x="10" y="139" width="302" height="365"/>
                         <animations/>
                         <color key="backgroundColor" red="0.9621645942" green="0.9621645942" blue="0.9621645942" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="NOg-f6-B8r" secondAttribute="height" multiplier="302:365" id="AdX-0k-Ihc"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="1" id="9PZ-dz-9To">
                             <size key="itemSize" width="95" height="95"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -30,15 +34,11 @@
                             <outlet property="delegate" destination="-1" id="Qd6-CI-8LA"/>
                         </connections>
                     </collectionView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Yn-6j-Sqz">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Yn-6j-Sqz">
                         <rect key="frame" x="8" y="8" width="100" height="100"/>
                         <animations/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="100" id="7ub-LE-4Pc"/>
-                            <constraint firstAttribute="width" constant="100" id="Ino-Ky-jgX"/>
-                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Martine, 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky8-iG-Dp2">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Martine, 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky8-iG-Dp2">
                         <rect key="frame" x="8" y="110" width="100" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
@@ -62,7 +62,7 @@
                         <animations/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ram-w4-f6S">
-                        <rect key="frame" x="208" y="83" width="32" height="21"/>
+                        <rect key="frame" x="208" y="83" width="54" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,13 +103,8 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="NOg-f6-B8r" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="9eA-Dk-2jV"/>
-                    <constraint firstItem="4Yn-6j-Sqz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Bn8-eB-jlt"/>
-                    <constraint firstItem="NOg-f6-B8r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="DBr-6n-l6n"/>
-                    <constraint firstItem="NOg-f6-B8r" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="F2d-x3-H4C"/>
-                    <constraint firstItem="4Yn-6j-Sqz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="blm-cx-I9a"/>
-                    <constraint firstItem="NOg-f6-B8r" firstAttribute="top" secondItem="ky8-iG-Dp2" secondAttribute="bottom" constant="8" id="vLg-pP-Eo3"/>
-                    <constraint firstItem="ky8-iG-Dp2" firstAttribute="top" secondItem="4Yn-6j-Sqz" secondAttribute="bottom" constant="2" id="yNA-qu-1DO"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="NOg-f6-B8r" secondAttribute="trailing" id="Y3G-td-xI2"/>
+                    <constraint firstItem="NOg-f6-B8r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="zsX-Az-t9B"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
