@@ -21,7 +21,7 @@
 // Color and Style Defines
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define UIColorNavbarBackground   ([UIColor colorWithRed:0.267 green:0.6 blue:0.808 alpha:1])
-#define UIColorTableViewBackgound ([UIColor colorWithRed:0.878 green:0.925 blue:0.973 alpha:1])
+#define UIColorProfileBorder ([UIColor colorWithRed:232/255. green:85/255. blue:76/255. alpha:1.0])
 #define UIFontSectionBigSize ([UIFont fontWithName:@"Helvetica Neue Medium" size:26.0])
 
 // Device Setting

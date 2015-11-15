@@ -10,7 +10,7 @@
             <objects>
                 <tableViewController id="faM-GV-cUI" customClass="UserTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="I2p-h7-p2g">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,10 +40,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mp4-8o-UqY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.2073485682" blue="0.40202795060000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Mp4-8o-UqY" firstAttribute="leading" secondItem="CZM-5W-7vK" secondAttribute="leading" id="WPf-l5-0nY"/>
                             <constraint firstItem="Mp4-8o-UqY" firstAttribute="centerX" secondItem="CZM-5W-7vK" secondAttribute="centerX" id="aNI-Ss-GPn"/>
@@ -64,12 +65,12 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YCS-nt-BlT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mIj-dz-hQH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="mIj-dz-hQH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.93725490199999995" green="0.30980392159999998" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.92549019610000005" green="0.2901960784" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="0.0"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -22,13 +22,12 @@
 }
 
 - (void)awakeFromNib {
-    // Initialization code
-    self.kUserImage.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.kUserImage.layer.shadowOffset = CGSizeMake(0, 1);
-    self.kUserImage.layer.shadowOpacity = 1;
-    self.kUserImage.layer.shadowRadius = 1.0;
-    self.kUserImage.clipsToBounds = NO;
-    self.kUserImage.contentMode = UIViewContentModeScaleAspectFit;
+    // Make it round
+    self.kUserImage.contentMode = UIViewContentModeScaleAspectFill;
+    self.kUserImage.layer.cornerRadius =self.kUserImage.frame.size.height/2;
+    self.kUserImage.layer.masksToBounds = YES;
+    self.kUserImage.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.kUserImage.layer.borderWidth=2;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -54,12 +53,11 @@
 }
 
 -(void)setValueForCell:(AFUserDetail*)detail{
-    self.kName.text = [detail valueForKey:JSON_NAME];
     self.kCityPostcode.text = [NSString stringWithFormat:@"%@, %@",[detail valueForKey:JSON_CITY],[detail valueForKey:JSON_POSTCODE]];
     self.kJobTitle.text = [detail valueForKey:JSON_JOB];
     self.KSmokeUser.text = [self isFlag:(BOOL)[detail valueForKey:JSON_SMOKER]];
     self.kWishForChildren.text = [self isFlag:(BOOL)[detail valueForKey:JSON_WISH_FOR]];
-    self.kFirstNameAge.text = [NSString stringWithFormat:@"%@, %@",[detail valueForKey:JSON_FIRSTNAME],[detail valueForKey:JSON_AGE]];
+    self.kFirstNameAge.text = [NSString stringWithFormat:@"%@, %@",[detail valueForKey:JSON_NAME],[detail valueForKey:JSON_AGE]];
     [self.kUserImage sd_setImageWithURL:[self replaceURL:[detail valueForKey:@"image_url"]]];
 }
 

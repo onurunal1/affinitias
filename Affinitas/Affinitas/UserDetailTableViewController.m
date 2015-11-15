@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     sb = [UIStoryboard storyboardWithName:K_STORYBOARD bundle:[NSBundle mainBundle]];
-    self.title = [self.userDetailList.data valueForKey:JSON_NAME];
+    self.title = [self.userDetailList.data valueForKey:JSON_FIRSTNAME];
   }
 
 - (void)didReceiveMemoryWarning {
