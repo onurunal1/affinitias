@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AFUserDetailRoot.h"
+#import "UserDetailCell.h"
 
-@interface UserDetailTableViewController : UITableViewController
+@interface UserDetailTableViewController : UITableViewController <UserDetailCellDelegate>
 
 @property (strong, nonatomic) NSString *userId;
 @property (nonatomic,strong) AFUserDetailRoot *userDetailList;

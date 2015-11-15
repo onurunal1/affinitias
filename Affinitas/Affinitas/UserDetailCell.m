@@ -10,6 +10,7 @@
 #import "AFUserDetail.h"
 #import "AFUserDetailRoot.h"
 #import "UserDetailGaleryCell.h"
+#import "UserImageViewController.h"
 
 #define K_CELL          @"UserDetailCell"
 #define K_CELL_GALERY   @"UserDetailGaleryCell"
@@ -86,5 +87,10 @@
     [cell.kThumbImage sd_setImageWithURL:[self replaceURL:(NSString*)userImages[indexPath.row]]];
     return cell;
 }
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [self.delegate didImageGaleryClicked:[self replaceURL:(NSString*)userImages[indexPath.row]]];
+}
+
 
 @end

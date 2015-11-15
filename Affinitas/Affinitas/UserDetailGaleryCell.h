@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserDetailGaleryCell : UICollectionViewCell
+@interface UserDetailGaleryCell : UICollectionViewCell <UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *kThumbImage;
 
 @end
