@@ -27,6 +27,11 @@
 #define API_HEADER_JSON                             @"application/json"
 #define API_HEADER_ACCEPT                           @"Accept"
 
+//Storyboard and IDs
+#define K_STORYBOARD                                @"Main"
+#define K_IMAGE_SLIDER_ID                           @"userImageView"
+
+//JSON Respnse Items
 #define JSON_NAME                                   @"name"
 #define JSON_FIRSTNAME                              @"firstname"
 #define JSON_CITY                                   @"city"

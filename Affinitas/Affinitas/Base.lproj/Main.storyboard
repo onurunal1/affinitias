@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Partner Suggestions-->
@@ -24,6 +25,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nM0-Qo-15z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2074" y="154"/>
+        </scene>
+        <!--User Image View Controller-->
+        <scene sceneID="DJp-oC-0sC">
+            <objects>
+                <viewController storyboardIdentifier="userImageView" id="umm-hf-d9I" customClass="UserImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hfd-v4-BCx"/>
+                        <viewControllerLayoutGuide type="bottom" id="p2M-jk-cvC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CZM-5W-7vK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mp4-8o-UqY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mp4-8o-UqY" secondAttribute="trailing" constant="-20" id="1tK-t3-bT0"/>
+                            <constraint firstItem="Mp4-8o-UqY" firstAttribute="top" secondItem="CZM-5W-7vK" secondAttribute="topMargin" id="AOR-t1-ROD"/>
+                            <constraint firstItem="p2M-jk-cvC" firstAttribute="top" secondItem="Mp4-8o-UqY" secondAttribute="bottom" id="Mvg-ED-6BM"/>
+                            <constraint firstItem="Mp4-8o-UqY" firstAttribute="leading" secondItem="CZM-5W-7vK" secondAttribute="leadingMargin" constant="-20" id="QWG-V8-Ygp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgUser" destination="Mp4-8o-UqY" id="qbV-rp-h3K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOI-XX-4cP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2322" y="945"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hc5-CR-T89">

@@ -13,6 +13,7 @@
 		371C1FD01BF2793800782949 /* Affinitas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 371C1FCE1BF2793800782949 /* Affinitas.xcdatamodeld */; };
 		371C1FD21BF2793800782949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371C1FD11BF2793800782949 /* Assets.xcassets */; };
 		371C1FD51BF2793800782949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371C1FD31BF2793800782949 /* LaunchScreen.storyboard */; };
+		3720A3DB1BF68D8700611482 /* UserImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3720A3DA1BF68D8700611482 /* UserImageViewController.m */; };
 		379F02651BF3A49200FB88D6 /* UserDetailGaleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F02631BF3A49200FB88D6 /* UserDetailGaleryCell.m */; };
 		379F02661BF3A49200FB88D6 /* UserDetailGaleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379F02641BF3A49200FB88D6 /* UserDetailGaleryCell.xib */; };
 		37CE71321BF2872700C72F96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37CE71341BF2872700C72F96 /* Localizable.strings */; };
@@ -42,6 +43,8 @@
 		371C1FD11BF2793800782949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		371C1FD41BF2793800782949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		371C1FD61BF2793800782949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3720A3D91BF68D8700611482 /* UserImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserImageViewController.h; sourceTree = "<group>"; };
+		3720A3DA1BF68D8700611482 /* UserImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserImageViewController.m; sourceTree = "<group>"; };
 		379F02621BF3A49200FB88D6 /* UserDetailGaleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailGaleryCell.h; sourceTree = "<group>"; };
 		379F02631BF3A49200FB88D6 /* UserDetailGaleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailGaleryCell.m; sourceTree = "<group>"; };
 		379F02641BF3A49200FB88D6 /* UserDetailGaleryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailGaleryCell.xib; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				37CE71401BF2B5E600C72F96 /* UserTableViewController.m */,
 				37CE71421BF2B6C600C72F96 /* UserDetailTableViewController.h */,
 				37CE71431BF2B6C600C72F96 /* UserDetailTableViewController.m */,
+				3720A3D91BF68D8700611482 /* UserImageViewController.h */,
+				3720A3DA1BF68D8700611482 /* UserImageViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				37CE71491BF2B7D300C72F96 /* UserListCell.m in Sources */,
 				37CE71501BF3404100C72F96 /* AFUserRoot.m in Sources */,
 				379F02651BF3A49200FB88D6 /* UserDetailGaleryCell.m in Sources */,
+				3720A3DB1BF68D8700611482 /* UserImageViewController.m in Sources */,
 				37CE71441BF2B6C600C72F96 /* UserDetailTableViewController.m in Sources */,
 				37CE71551BF3751100C72F96 /* AFUserDetailRoot.m in Sources */,
 				37CE71411BF2B5E600C72F96 /* UserTableViewController.m in Sources */,

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Affinitas/UserDetailCell.m"
-            timestampString = "469013018.756649"
+            timestampString = "469143979.295311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-isFlag:"
             landmarkType = "5">
          </BreakpointContent>

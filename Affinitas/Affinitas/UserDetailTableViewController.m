@@ -9,17 +9,21 @@
 #import "UserDetailTableViewController.h"
 #import "AFUserDetailRoot.h"
 #import "UserDetailCell.h"
+#import "UserImageViewController.h"
 
 #define K_USER_DETAIL_CELL                @"UserDetailCell"
 
-@interface UserDetailTableViewController ()
-
+@interface UserDetailTableViewController (){
+    UIStoryboard *sb;
+}
 @end
 
 @implementation UserDetailTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    sb = [UIStoryboard storyboardWithName:K_STORYBOARD bundle:[NSBundle mainBundle]];
+    self.title = [self.userDetailList.data valueForKey:JSON_NAME];
   }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +49,16 @@
     UserDetailCell *cell = [self.tableView dequeueReusableCellWithIdentifier:K_USER_DETAIL_CELL];
     if (!cell)
         cell = [[UserDetailCell alloc] initWithCustomNibAndController:self detail:self.userDetailList.data];
+    cell.delegate = self;
     return  cell;
+}
+
+#pragma mark - UserDetailCell Delegate
+
+-(void)didImageGaleryClicked:(NSURL *)imageURL{
+    UserImageViewController *galleryView = [sb instantiateViewControllerWithIdentifier:K_IMAGE_SLIDER_ID];
+    galleryView.sImage = imageURL;
+    [self.navigationController pushViewController:galleryView animated:YES];
 }
 
 @end
