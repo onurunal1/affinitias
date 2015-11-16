@@ -18,12 +18,11 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    self.kUserImage.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.kUserImage.layer.shadowOffset = CGSizeMake(0, 1);
-    self.kUserImage.layer.shadowOpacity = 1;
-    self.kUserImage.layer.shadowRadius = 1.0;
-    self.kUserImage.clipsToBounds = NO;
-    self.kUserImage.contentMode = UIViewContentModeScaleAspectFit;
+    self.kUserImage.contentMode = UIViewContentModeScaleAspectFill;
+    self.kUserImage.layer.cornerRadius =self.kUserImage.frame.size.height/2;
+    self.kUserImage.layer.masksToBounds = YES;
+    self.kUserImage.layer.borderColor = [UIColor blackColor].CGColor;
+    self.kUserImage.layer.borderWidth=1;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
