@@ -42,7 +42,7 @@ pod 'KASlideShow'
 
 ##Screenshots:
 ###User Feed View :
-![alt tag] (https://github.com/onurunal1/affinitias/blob/master/List.png)
+![alt tag] (https://github.com/onurunal1/affinitias/blob/master/List2.png)
 ###User Detail Feed View:
 ![alt tag] (https://github.com/onurunal1/affinitias/blob/master/Detail.png)
 ###User Photo View:
