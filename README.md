@@ -36,7 +36,7 @@ pod 'KASlideShow'
 ```sh
 1. You can set the VERBOSE_FLAG(s) that described in AFDefines_h to watch the JSON data on the console
    DKLog(K_VERBOSE_MOBILE_API_JSON, @"User List --> {%@}",user);
-2. All api operations are performed in APIManager and it is always forwarding the reponse data to view controller,
+2. All api operations are performed in APIManager and it is always forwarding the response data to view controller,
 3. Then the viewcontroller passed the user objects to the related custom cells. 
 ```
 
